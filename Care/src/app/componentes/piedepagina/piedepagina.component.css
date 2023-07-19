@@ -1,0 +1,16 @@
+footer {
+    background: linear-gradient(135deg, #9ed8e5dc, #bad4ff62);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.card-footer{
+    background: transparent;
+}
