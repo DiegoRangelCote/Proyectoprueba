@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #9ed8e5dc, #bad4ff62);
+    font-family: 'Lemon';
 }
 
 .container {
