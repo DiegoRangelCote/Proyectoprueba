@@ -1,0 +1,57 @@
+
+.container {
+    margin-top: 70px;
+    max-width: 380px;
+    width: 100%;
+    background: #fff;
+    border:solid 2px;
+    padding: 26px 60px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    font-family: 'Lemon';
+}
+
+
+
+.container .user-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+
+.input-login {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    background: linear-gradient(135deg, #9ed8e5dc, #bad4ff62);
+    border-radius: 10px;
+    height: 40px;
+    margin: 50px 0;
+    width: 100%;
+}
+.button {
+    height: 50px;
+    margin: 50px 0;
+    width: 100%;
+}
+
+.btn:not(:disabled):not(.disabled):hover {
+    background: linear-gradient(-135deg, #b6cfd2dc, #c9daf2cc);
+}
