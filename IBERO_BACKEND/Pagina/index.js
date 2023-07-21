@@ -43,7 +43,7 @@ var CargarTodas = function() {
     <td>${respuesta.documentos[a].nombre}</td>
     <td>${respuesta.documentos[a].apellido}</td>
     <td>${respuesta.documentos[a].edad}</td>
-</tr>`
+    </tr>`
         }
     })
 }

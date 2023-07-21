@@ -148,14 +148,14 @@ usuariosController.EliminarporCedula = function(request, response) {
 usuariosController.Ingresar = function(request, response) {
     var post = {
         correo: request.body.correo,
-        contraseña: request.body.contraseña
+        contrasena: request.body.contrasena
 
     }
     if (post.correo == undefined || post.correo == null || post.correo.trim() == "") {
         response.json({ state: false, mensaje: "el campo correo es un campo obligatorio" })
         return false;
     }
-    if (post.contraseña == undefined || post.contraseña == null || post.contraseña.trim() == "") {
+    if (post.contrasena == undefined || post.contrasena == null || post.contrasena.trim() == "") {
         response.json({ state: false, mensaje: "el campo contraseña es un campo obligatorio" })
         return false;
     }

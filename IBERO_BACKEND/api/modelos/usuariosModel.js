@@ -19,13 +19,18 @@ const Mymodel = mongoose.model("usuarios", UsuariosSchema)
 usuariosModel.Guardar = function(post, callback) {
 
     const instancia = new Mymodel
-    instancia.nombre = post.nombre
+    
     instancia.cedula = post.cedula
+    instancia.nombre = post.nombre
     instancia.apellido = post.apellido
     instancia.edad = post.edad
     instancia.correo = post.correo
     instancia.contrasena = post.contrasena
     instancia.rol = 1
+    instancia.direccion=post.direccion
+    instancia.ciudad=post.ciudad
+    instancia.departamento=post.departamento
+    instancia.telefono=post.telefono
 
 
     instancia.save((error, Creado) => {
