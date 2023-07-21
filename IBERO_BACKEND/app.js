@@ -7,6 +7,12 @@ var bodyParser = require("body-parser")
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.all('*', function(req, res, next) {
+    res.header("Access-Control-Allow-Credentials", "true")
+    next();
+})
+
+
 const cors = require('cors')
 app.use(cors({
     origin: "http://localhost:4200",

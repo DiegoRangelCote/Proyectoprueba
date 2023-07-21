@@ -20,10 +20,13 @@ import { ServiciobComponent } from './componentes/serviciob/serviciob.component'
 import { ServiciocComponent } from './componentes/servicioc/servicioc.component';
 import { ServiciodComponent } from './componentes/serviciod/serviciod.component';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MensajesComponent } from './componentes/mensajes/mensajes.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { MenudashComponent } from './componentes/menudash/menudash.component'
+import { InterceptorService } from './interceptor/interceptor.service';
+
+
 
 
 
@@ -60,7 +63,14 @@ import { MenudashComponent } from './componentes/menudash/menudash.component'
     HttpClientModule
   ],
 
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:InterceptorService,
+      multi:true
+    }
+  
+  ],
 
   bootstrap: [AppComponent]
 })
