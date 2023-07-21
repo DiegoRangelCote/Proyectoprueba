@@ -12,17 +12,18 @@ export class PeticionService {
 
   Post(url:string,data:{}){
     
-let promise = new Promise((resolve,reject)=>{
+    let promise = new Promise((resolve,reject)=>{
 
-  this.http.post(url,data)
-  .toPromise()
-  .then((res:any)=>{
-    console.log(res)
-    resolve(res)
-  })
+        this.http.post(url,data)
+        .toPromise()
+        .then((res:any)=>{
+          console.log(res)
+          resolve(res)
+        })
   
-});
-return promise
+    });
+
+    return promise
   }
 
   Get(url:string){
@@ -37,7 +38,9 @@ return promise
       })
       
     });
+
     return promise
-      }
+
+  }
 
 }

@@ -12,19 +12,19 @@ var PermisosSchema = new Schema({
 
 const Mymodel = mongoose.model("permisos", PermisosSchema)
 
-midleware.Acceso = function(request, response, next) {
+midleware.Acceso = function(request,response,next) {
     console.log(request.url)
     var post = {
         ruta: request.url,
-        rol: (request.session.rol)
+        rol: request.session.rol
     }
 
-    Mymodel.find({ ruta: post.ruta, rol_id: post.rol }, { estado: 1 }, (error, documentos) => {
+    Mymodel.find({ ruta: post.ruta,rol_id: post.rol},{estado: 1 }, (error, documentos) => {
         if (error) {
-            response.json({ state: false, mensaje: "Error en el Midleware" })
+            response.json({state:false,mensaje:"Error en el Midleware"})
         } else {
             if (documentos.length == 0) {
-                response.json({ state: false, mensaje: "Este permiso No Existe" })
+                response.json({state: false,mensaje:"Este permiso No Existe"})
             } else {
                 if (documentos[0].estado == 0) {
                     response.json({ state: false, mensaje: "No tiene Acceso" })

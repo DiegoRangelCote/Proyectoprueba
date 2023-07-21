@@ -10,16 +10,16 @@ export class RegistroComponent {
 
   constructor(private peticion:PeticionService){}
 
-nombre:String =""
-apellido:String =""
-cedula:String =""
-edad:Number =0
-correo:String =""
-contrasena:String =""
-direccion:String =""
-ciudad:String =""
-departamento:String =""
-telefono:String =""
+  cedula:String =""
+  nombre:String =""
+  apellido:String =""
+  edad:Number =0
+  correo:String =""
+  contrasena:String =""
+  direccion:String =""
+  ciudad:String =""
+  departamento:String =""
+  telefono:String =""
 
 
 Registrar(){

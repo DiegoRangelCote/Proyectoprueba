@@ -1,4 +1,4 @@
-var express = require("express")
+const express = require("express")
 global.app = express()
 global.config = require("./config.js").config
 const mongoose = require('mongoose')
@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 const cors = require('cors')
 app.use(cors({
     origin: "http://localhost:4200",
-    methods: ["GET", "POST", "PUT", "DELETE"]
+    methods: ["GET","POST","PUT","DELETE"]
 }))
 
 var session = require('express-session')({
