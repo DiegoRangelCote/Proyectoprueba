@@ -6,6 +6,7 @@ import { CitasComponent } from './componentes/citas/citas.component';
 import { ExamenesComponent } from './componentes/examenes/examenes.component';
 import { AcompaComponent } from './componentes/acompa/acompa.component';
 import { IngresarComponent } from './componentes/ingresar/ingresar.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent,pathMatch:"full"},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:"acompa",component:AcompaComponent,pathMatch:"full"},
   {path:"examenes",component:ExamenesComponent,pathMatch:"full"},
   {path:"citas",component:CitasComponent,pathMatch:"full"},
+  {path:"dashboard",component:DashboardComponent,pathMatch:"full"},
   {path:"**",component:HomeComponent,pathMatch:"full"},
   ];
 

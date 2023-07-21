@@ -21,7 +21,9 @@ import { ServiciocComponent } from './componentes/servicioc/servicioc.component'
 import { ServiciodComponent } from './componentes/serviciod/serviciod.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { MensajesComponent } from './componentes/mensajes/mensajes.component'
+import { MensajesComponent } from './componentes/mensajes/mensajes.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { MenudashComponent } from './componentes/menudash/menudash.component'
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { MensajesComponent } from './componentes/mensajes/mensajes.component'
     ServiciobComponent,
     ServiciocComponent,
     ServiciodComponent,
-    MensajesComponent
+    MensajesComponent,
+    DashboardComponent,
+    MenudashComponent
 
   ],
 

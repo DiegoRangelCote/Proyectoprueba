@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MensajesService } from 'src/app/servicios/mensajes.service';
 
 @Component({
   selector: 'app-mensajes',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class MensajesComponent {
 
+  constructor(public msg:MensajesService){}
 }

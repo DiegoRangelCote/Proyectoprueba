@@ -1,0 +1,12 @@
+#menulateral {
+    width: 142px;
+    background: linear-gradient(135deg, #89c8d6dc, #a1c0f367);
+    height: 100vh;
+}
+
+.itemmenu {
+    color: white;
+    cursor: pointer;
+    padding-top: 16px;
+    margin-left: 11px;
+}

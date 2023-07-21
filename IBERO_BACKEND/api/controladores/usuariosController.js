@@ -1,6 +1,6 @@
 var usuariosModel = require('../modelos/usuariosModel.js').usuariosModel
 var usuariosController = {}
-config.puerto = 3000
+
 
 usuariosController.Guardar = function(request, response) {
 
