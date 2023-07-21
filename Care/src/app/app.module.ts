@@ -25,6 +25,7 @@ import { MensajesComponent } from './componentes/mensajes/mensajes.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { MenudashComponent } from './componentes/menudash/menudash.component'
 import { InterceptorService } from './interceptor/interceptor.service';
+import { PacientesComponent } from './componentes/privado/pacientes/pacientes.component';
 
 
 
@@ -52,7 +53,8 @@ import { InterceptorService } from './interceptor/interceptor.service';
     ServiciodComponent,
     MensajesComponent,
     DashboardComponent,
-    MenudashComponent
+    MenudashComponent,
+    PacientesComponent
 
   ],
 

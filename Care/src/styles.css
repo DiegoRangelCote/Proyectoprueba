@@ -1,6 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+
+body {
     background: linear-gradient(135deg, #cfe5eadc, #cddaee9b);
     background-size: cover;
     background-attachment: fixed;
+}
+
+.entorno {
+    position: absolute;
+    left: 142px;
+    top: 0px;
+    background: whitesmoke;
+    width: calc(100%-143px);
+    height: 100vh;
 }
