@@ -20,15 +20,11 @@ import { ServiciobComponent } from './componentes/serviciob/serviciob.component'
 import { ServiciocComponent } from './componentes/servicioc/servicioc.component';
 import { ServiciodComponent } from './componentes/serviciod/serviciod.component';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
 import {HttpClientModule} from '@angular/common/http';
 import { MensajesComponent } from './componentes/mensajes/mensajes.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { MenudashComponent } from './componentes/menudash/menudash.component'
-=======
-import { HttpClientModule } from '@angular/common/http';
-import { MensajesComponent } from './componentes/mensajes/mensajes.component'
->>>>>>> a649261194d0b3b195b0cb56c52a6cb7d7e80bf9
+
 
 
 @NgModule({

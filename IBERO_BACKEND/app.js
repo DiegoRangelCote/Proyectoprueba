@@ -10,11 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 const cors = require('cors')
 app.use(cors({
     origin: "http://localhost:4200",
-<<<<<<< HEAD
-    methods: ["GET", "POST", "PUT", "DELETE", "PATH"]
-=======
-    methods: ["GET","POST","PUT","DELETE"]
->>>>>>> a649261194d0b3b195b0cb56c52a6cb7d7e80bf9
+    methods: ["GET", "POST", "PUT", "DELETE"]
 }))
 
 var session = require('express-session')({

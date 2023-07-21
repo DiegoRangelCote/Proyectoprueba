@@ -1,10 +1,5 @@
 var usuariosModel = require('../modelos/usuariosModel.js').usuariosModel
 var usuariosController = {}
-<<<<<<< HEAD
-
-=======
-config.puerto = 3000/*tienes un puerto de configuracion donde no va*/
->>>>>>> a649261194d0b3b195b0cb56c52a6cb7d7e80bf9
 
 usuariosController.Guardar = function(request, response) {
 
@@ -15,10 +10,10 @@ usuariosController.Guardar = function(request, response) {
         edad: request.body.edad,
         correo: request.body.correo,
         contrasena: request.body.contrasena,
-       /* departamento : request.body.departamento,
-        ciudad : request.body.ciudad,
-        direccion : request.body.direccion,
-        telefono : request.body.telefono, te falta esta linea*/
+        /* departamento : request.body.departamento,
+         ciudad : request.body.ciudad,
+         direccion : request.body.direccion,
+         telefono : request.body.telefono, te falta esta linea*/
     }
 
     if (post.nombre == undefined || post.nombre == null || post.nombre.trim() == "") {
@@ -89,12 +84,12 @@ usuariosController.ActualizarporCedula = function(request, response) {
         nombre: request.body.nombre,
         apellido: request.body.apellido,
         edad: request.body.edad,
-        correo:request.body.correo,
-        contrasena:request.body.contrasena,
-        direccion:request.body.direccion,
-        ciudad:request.body.ciudad,
-        departamento:request.body.departamento,
-        telefono:request.body.telefono
+        correo: request.body.correo,
+        contrasena: request.body.contrasena,
+        direccion: request.body.direccion,
+        ciudad: request.body.ciudad,
+        departamento: request.body.departamento,
+        telefono: request.body.telefono
     }
 
     if (post.nombre == undefined || post.nombre == null || post.nombre.trim() == "") {
