@@ -8,21 +8,12 @@ usuariosController.Guardar = function(request, response) {
         nombre: request.body.nombre,
         apellido: request.body.apellido,
         edad: request.body.edad,
-<<<<<<< HEAD
         correo: request.body.correo,
         contrasena: request.body.contrasena,
         /* departamento : request.body.departamento,
          ciudad : request.body.ciudad,
          direccion : request.body.direccion,
          telefono : request.body.telefono, te falta esta linea*/
-=======
-        correo:request.body.correo,
-        contrasena:request.body.contrasena,
-        direccion:request.body.direccion,
-        ciudad:request.body.ciudad,
-        departamento:request.body.departamento,
-        telefono:request.body.telefono
->>>>>>> e3135c7 (realizando ajustes en los componentes donde realizo organizacion del codigo segun las clases que hemos tenido, eso implica en el codigo de el backend, exite una pagina de pruebas sin agular en la carpeta backend que validar los permisos)
     }
 
     if (post.nombre == undefined || post.nombre == null || post.nombre.trim() == "") {
@@ -93,23 +84,12 @@ usuariosController.ActualizarporCedula = function(request, response) {
         nombre: request.body.nombre,
         apellido: request.body.apellido,
         edad: request.body.edad,
-<<<<<<< HEAD
         correo: request.body.correo,
         contrasena: request.body.contrasena,
         direccion: request.body.direccion,
         ciudad: request.body.ciudad,
         departamento: request.body.departamento,
         telefono: request.body.telefono
-=======
-        correo:request.body.correo,
-        contrasena:request.body.contrasena,
-        direccion:request.body.direccion,
-        ciudad:request.body.ciudad,
-        departamento:request.body.departamento,
-        telefono:request.body.telefono
-
-
->>>>>>> e3135c7 (realizando ajustes en los componentes donde realizo organizacion del codigo segun las clases que hemos tenido, eso implica en el codigo de el backend, exite una pagina de pruebas sin agular en la carpeta backend que validar los permisos)
     }
 
     if (post.nombre == undefined || post.nombre == null || post.nombre.trim() == "") {
