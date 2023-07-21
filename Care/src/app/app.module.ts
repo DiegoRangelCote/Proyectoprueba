@@ -19,6 +19,9 @@ import { ServicioaComponent } from './componentes/servicioa/servicioa.component'
 import { ServiciobComponent } from './componentes/serviciob/serviciob.component';
 import { ServiciocComponent } from './componentes/servicioc/servicioc.component';
 import { ServiciodComponent } from './componentes/serviciod/serviciod.component';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { MensajesComponent } from './componentes/mensajes/mensajes.component'
 
 
 @NgModule({
@@ -40,13 +43,16 @@ import { ServiciodComponent } from './componentes/serviciod/serviciod.component'
     ServicioaComponent,
     ServiciobComponent,
     ServiciocComponent,
-    ServiciodComponent
+    ServiciodComponent,
+    MensajesComponent
 
   ],
 
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
 
   providers: [],

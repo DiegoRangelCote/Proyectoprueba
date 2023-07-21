@@ -1,59 +1,59 @@
 <app-menu></app-menu>
 
 
-    <div class="container">
-        <div class="row">
-            <h1 class="title">REGISTRO</h1>
-            
-                <div class="user-details">
-                    <div class="input-box">
-                        <span class="details">Nombre</span>
-                        <input type="text" placeholder="Nombre" required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Apellido</span>
-                        <input type="text" placeholder="Apellido" required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Cedula</span>
-                        <input type="text" placeholder="Cedula" required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Edad</span>
-                        <input type="text" placeholder="Edad">
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Correo Electrónico</span>
-                        <input type="text" placeholder="Correo Electrónico" required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Contraseña</span>
-                        <input type="text" placeholder="Contraseña" required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Dirección</span>
-                        <input type="text" placeholder="Dirección">
-                    </div>
+<div class="container">
+    <div class="row">
+        <h1 class="title">REGISTRO</h1>
 
-                    <div class="input-box">
-                        <span class="details">Ciudad</span>
-                        <input type="text" placeholder="Ciudad">
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Departamento</span>
-                        <input type="text" placeholder="Departamento">
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Telefono</span>
-                        <input type="text" placeholder="Telefono">
-                    </div>
-                </div>
-            
-            <button class="btn">Registrar</button>
-            
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">Nombre</span>
+                <input type="text" placeholder="Nombre" [(ngModel)]="nombre">
+            </div>
+            <div class="input-box">
+                <span class="details">Apellido</span>
+                <input type="text" placeholder="Apellido" [(ngModel)]="apellido">
+            </div>
+            <div class="input-box">
+                <span class="details">Cedula</span>
+                <input type="text" placeholder="Cedula" [(ngModel)]="cedula">
+            </div>
+            <div class="input-box">
+                <span class="details">Edad</span>
+                <input type="text" placeholder="Edad" [(ngModel)]="edad">
+            </div>
+            <div class="input-box">
+                <span class="details">Correo Electrónico</span>
+                <input type="text" placeholder="Correo Electrónico" [(ngModel)]="correo">
+            </div>
+            <div class="input-box">
+                <span class="details">Contraseña</span>
+                <input type="text" placeholder="Contraseña" [(ngModel)]="contrasena">
+            </div>
+            <div class="input-box">
+                <span class="details">Dirección</span>
+                <input type="text" placeholder="Dirección" [(ngModel)]="direccion">
+            </div>
 
+            <div class="input-box">
+                <span class="details">Ciudad</span>
+                <input type="text" placeholder="Ciudad" [(ngModel)]="ciudad">
+            </div>
+            <div class="input-box">
+                <span class="details">Departamento</span>
+                <input type="text" placeholder="Departamento" [(ngModel)]="departamento">
+            </div>
+            <div class="input-box">
+                <span class="details">Telefono</span>
+                <input type="text" placeholder="Telefono" [(ngModel)]="telefono">
+            </div>
         </div>
+
+        <button class="btn" (click)="Registrar()">Registrar</button>
+
+
     </div>
+</div>
 
 
 
