@@ -10,7 +10,6 @@ import { PeticionService } from 'src/app/servicios/peticion.service';
 })
 export class IngresarComponent {
 
-<<<<<<< HEAD
 
   constructor(private peticion:PeticionService, private msg:MensajesService, private router:Router){}
 
@@ -41,8 +40,5 @@ export class IngresarComponent {
         }
       }
     )
-=======
-  
->>>>>>> e3135c7 (realizando ajustes en los componentes donde realizo organizacion del codigo segun las clases que hemos tenido, eso implica en el codigo de el backend, exite una pagina de pruebas sin agular en la carpeta backend que validar los permisos)
 }
 }

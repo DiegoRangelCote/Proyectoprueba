@@ -39,7 +39,7 @@
 }
 
 
-.btningresar {
+.button {
     cursor: pointer;
     background: linear-gradient(135deg, #9ed8e5dc, #bad4ff62);
     border-radius: 10px;
@@ -48,6 +48,6 @@
     width: 100%;
 }
 
-.btningresar:hover {
+.button:hover {
     background: linear-gradient(-135deg, #b6cfd2dc, #c9daf2cc);
 }
