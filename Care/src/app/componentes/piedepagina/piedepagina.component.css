@@ -1,6 +1,8 @@
 footer {
-    background: linear-gradient(135deg, #9ed8e5dc, #bad4ff62);
+    background: linear-gradient(72deg, #9ed8e5dc, #bad4ff8f);
+    font-family: 'Lemon';
 }
+
 
 .icon {
     width: 60px;
@@ -9,9 +11,10 @@ footer {
     display: flex;
     justify-content: center;
     font-size: 30px;
-    font-family: 'Lemon';
+    
 }
 
 .card-footer{
     background: transparent;
+    
 }

@@ -1,8 +1,5 @@
-
-.card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.25rem;
-    font-family: 'Lemon';
+#btninforacompañamiento{
+    margin-left: 25px;
+    margin-top: 15px;
 }
+    

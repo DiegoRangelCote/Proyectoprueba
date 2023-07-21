@@ -14,6 +14,11 @@ import { MenuPriDesComponent } from './componentes/menu-pri-des/menu-pri-des.com
 import { MenuPriUsComponent } from './componentes/menu-pri-us/menu-pri-us.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { PiedepaginaComponent } from './componentes/piedepagina/piedepagina.component';
+import { CuerpoComponent } from './componentes/cuerpo/cuerpo.component';
+import { ServicioaComponent } from './componentes/servicioa/servicioa.component';
+import { ServiciobComponent } from './componentes/serviciob/serviciob.component';
+import { ServiciocComponent } from './componentes/servicioc/servicioc.component';
+import { ServiciodComponent } from './componentes/serviciod/serviciod.component';
 
 
 @NgModule({
@@ -30,7 +35,12 @@ import { PiedepaginaComponent } from './componentes/piedepagina/piedepagina.comp
     MenuPriDesComponent,
     MenuPriUsComponent,
     RegistroComponent,
-    PiedepaginaComponent
+    PiedepaginaComponent,
+    CuerpoComponent,
+    ServicioaComponent,
+    ServiciobComponent,
+    ServiciocComponent,
+    ServiciodComponent
 
   ],
 

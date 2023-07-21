@@ -38,7 +38,8 @@
     font-size: 16px;
 }
 
-.btn:not(:disabled):not(.disabled) {
+
+.button {
     cursor: pointer;
     background: linear-gradient(135deg, #9ed8e5dc, #bad4ff62);
     border-radius: 10px;
@@ -46,12 +47,7 @@
     margin: 50px 0;
     width: 100%;
 }
-.button {
-    height: 50px;
-    margin: 50px 0;
-    width: 100%;
-}
 
-.btn:not(:disabled):not(.disabled):hover {
+.button:hover {
     background: linear-gradient(-135deg, #b6cfd2dc, #c9daf2cc);
 }

@@ -8,6 +8,8 @@
     transition: -webkit-transform 1.4s ease-in-out;
     transition: transform 1.4s ease-in-out;
     transition: transform 1.4s ease-in-out,-webkit-transform 1.4s ease-in-out;
+    font-family: 'Lemon', cursive;
+    
 }
 
 .d-block {

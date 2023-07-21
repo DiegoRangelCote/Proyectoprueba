@@ -1,0 +1,24 @@
+.container{
+    margin-top: 30px;
+}
+
+.row{
+    margin-top: 10px;
+}
+.titulo1 {
+    font-family: 'Abril Fatface';
+    color: #45d3d8;
+}
+
+.formulario {
+    background: rgba(241, 237, 237, 0.259);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-radius: 7px;
+    box-shadow: 0 0 30px rgba(237, 202, 202, 0.568);
+    width: 340px;
+}
+.formulario:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+}

@@ -1,23 +1,16 @@
-body {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #9ed8e5dc, #bad4ff62);
-    font-family: 'Lemon';
-}
 
 .container {
-    max-width: 628px;
+    max-width: 700px;
     width: 100%;
     background: #fff;
     padding: 26px 60px;
     border-radius: 5px;
     margin-bottom: 50px;
+    font-family: 'Lemon';
 }
 
-.title {
-    font-size: 20px;
+.h1 {
+    font-size: 24px;
     font-weight: 600;
     text-align: center;
     padding-bottom: 6px;
@@ -25,22 +18,25 @@ body {
     width: 100%;
 }
 
-.container .user-details {
+.user-details {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 20px 0 12px 0;
 }
 
-form .user-details .input-box {
-    margin-bottom: 15px;
-    width: 100%;
+.input-box {
+    
+    width: calc(100% / 2 -10px);
+    margin: 20px 0 12px 0;
+    margin-top: 5px;
+
 }
 
 .user-details .input-box .details {
     display: block;
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .user-details .input-box input {
@@ -53,18 +49,13 @@ form .user-details .input-box {
     font-size: 16px;
 }
 
-.button {
-    height: 45px;
-    margin: 45px 0;
-    width: 100%;
-}
-
-.button input {
+.btn {
     height: 100%;
     width: 100%;
+    margin: 45px 0;
     outline: none;
     color: #1e1b1b;
-    background: linear-gradient(135deg, #b6cfd2dc, #c9daf2cc);
+    background: linear-gradient(135deg, #b1cbcece, #9daec7d2);
     border: none;
     border-radius: 5px;
     font-size: 18px;
@@ -72,6 +63,6 @@ form .user-details .input-box {
     letter-spacing: 1px;
 }
 
-.button input:hover {
+.btn:hover {
     background: linear-gradient(-135deg, #b6cfd2dc, #c9daf2cc);
 }
