@@ -11,6 +11,7 @@ export class RegistroComponent {
 
   constructor(private peticion:PeticionService, private msg:MensajesService){}
 
+<<<<<<< HEAD
 nombre:String =""
 apellido:String =""
 cedula:String =""
@@ -21,6 +22,18 @@ direccion:String =""
 ciudad:String =""
 departamento:String =""
 telefono:String =""
+=======
+  cedula:String =""
+  nombre:String =""
+  apellido:String =""
+  edad:Number =0
+  correo:String =""
+  contrasena:String =""
+  direccion:String =""
+  ciudad:String =""
+  departamento:String =""
+  telefono:String =""
+>>>>>>> a649261194d0b3b195b0cb56c52a6cb7d7e80bf9
 
 
 Registrar(){
