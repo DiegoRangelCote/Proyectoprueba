@@ -8,6 +8,9 @@ import { AcompaComponent } from './componentes/acompa/acompa.component';
 import { IngresarComponent } from './componentes/ingresar/ingresar.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { PacientesComponent } from './componentes/privado/pacientes/pacientes.component';
+import { MedicamentosComponent } from './componentes/privado/medicamentos/medicamentos.component';
+import { UsuariosComponent } from './componentes/privado/usuarios/usuarios.component';
+
 
 const routes: Routes = [
   {path:"",component:HomeComponent,pathMatch:"full"},
@@ -18,6 +21,8 @@ const routes: Routes = [
   {path:"citas",component:CitasComponent,pathMatch:"full"},
   {path:"dashboard",component:DashboardComponent,pathMatch:"full"},
   {path:"pacientes",component:PacientesComponent,pathMatch:"full"},
+  {path:"medicamentos",component:MedicamentosComponent,pathMatch:"full"},
+  {path:"usuarios",component:UsuariosComponent,pathMatch:"full"},
   {path:"**",component:HomeComponent,pathMatch:"full"},
   ];
 
