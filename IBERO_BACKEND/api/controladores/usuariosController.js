@@ -10,10 +10,10 @@ usuariosController.Guardar = function(request, response) {
         edad: request.body.edad,
         correo: request.body.correo,
         contrasena: request.body.contrasena,
-        /* departamento : request.body.departamento,
+        departamento : request.body.departamento,
          ciudad : request.body.ciudad,
          direccion : request.body.direccion,
-         telefono : request.body.telefono, te falta esta linea*/
+         telefono : request.body.telefono,
     }
 
     if (post.nombre == undefined || post.nombre == null || post.nombre.trim() == "") {
