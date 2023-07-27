@@ -1,40 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MensajesService } from 'src/app/servicios/mensajes.service';
 import { PeticionService } from 'src/app/servicios/peticion.service';
 
 declare var $:any
 
-
 @Component({
-  selector: 'app-pacientes',
-  templateUrl: './pacientes.component.html',
-  styleUrls: ['./pacientes.component.css']
+  selector: 'app-medicamentos',
+  templateUrl: './medicamentos.component.html',
+  styleUrls: ['./medicamentos.component.css']
 })
-export class PacientesComponent implements OnInit{
-
+export class MedicamentosComponent {
   constructor(private peticion:PeticionService, private msg:MensajesService){}
 
   ngOnInit(): void {
     this.CargarTodas()
   }
 
-fecha:String = ""
-nombre:String = ""
-apellido:String = ""
-cedula:String = ""
-contacto:String = ""
+codigo:String = ""
 medicamento:String = ""
-contrasena:String = ""
+cantidad:String = ""
+precio:String = ""
 Idseleccionado:String = ""
 datos:any[] = []
 
 nuevo(){
-  this.fecha = ""
-  this.nombre = ""
-  this.apellido = ""
-  this.cedula = ""
-  this.contacto = ""
+  this.codigo = ""
   this.medicamento = ""
+  this.cantidad = ""
+  this.precio = ""
   this.Idseleccionado = ""
   $('#exampleModal').modal('show')
 }
@@ -42,7 +35,7 @@ nuevo(){
 CargarTodas(){
   let data = {
     host:this.peticion.urlLocal,
-    path:"/Pacientes/CargarTodas",
+    path:"/Medicamentos/CargarTodas",
     payload:{
     }
   }
@@ -61,8 +54,8 @@ CargarId(id:string){
   console.log(id)
   let data = {
     host:this.peticion.urlLocal,
-    path:"/Pacientes/CargarporId",
-    payload:{
+    path:"/Medicamentos/CargarporId",
+    payload:{ 
       Id:id.toString()
     }
   }
@@ -71,12 +64,10 @@ CargarId(id:string){
     (res:any)=>{
       
       if(res.state = true){
-        this.fecha = res.documentos[0].fecha
-        this.nombre = res.documentos[0].nombre
-        this.apellido = res.documentos[0].apellido
-        this.cedula = res.documentos[0].cedula
-        this.contacto = res.documentos[0].contacto
+        this.codigo = res.documentos[0].codigo
         this.medicamento = res.documentos[0].medicamento
+        this.cantidad = res.documentos[0].cantidad
+        this.precio = res.documentos[0].precio
         this.Idseleccionado = res.documentos[0]._id
         $('#exampleModal').modal('show')
       }
@@ -91,13 +82,11 @@ CargarId(id:string){
 Actualizar(){
   let data = {
     host:this.peticion.urlLocal,
-    path:"/Pacientes/ActualizarporId",
+    path:"/Medicamentos/ActualizarporId",
     payload:{
-      fecha:this.fecha,
-      nombre:this.nombre,
-      apellido:this.apellido,
-      contacto:this.contacto,
       medicamento:this.medicamento,
+      cantidad:this.cantidad,
+      precio:this.precio,
       Id:this.Idseleccionado
     }
   }
@@ -121,14 +110,12 @@ Actualizar(){
 Guardar(){
   let data = {
     host:this.peticion.urlLocal,
-    path:"/Pacientes/Guardar",
+    path:"/Medicamentos/Guardar",
     payload:{
-      fecha:this.fecha.toString(),
-      nombre:this.nombre,
-      apellido:this.apellido,
-      cedula:this.cedula.toString(),
-      contacto:this.contacto.toString(),
-      medicamento:this.medicamento
+      codigo:this.codigo.toString(),
+      medicamento:this.medicamento,
+      cantidad:this.cantidad.toString(),
+      precio:this.precio.toString(),
     }
   }
 
@@ -151,7 +138,7 @@ Guardar(){
 Eliminar(){
   let data = {
     host:this.peticion.urlLocal,
-    path:"/Pacientes/EliminarporId",
+    path:"/Medicamentos/EliminarporId",
     payload:{
       Id:this.Idseleccionado.toString(),
       

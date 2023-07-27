@@ -4,16 +4,24 @@ var usuariosController = {}
 usuariosController.Guardar = function(request, response) {
 
     var post = {
-        cedula: request.body.cedula,
+
         nombre: request.body.nombre,
         apellido: request.body.apellido,
+        cedula: request.body.cedula,
         edad: request.body.edad,
         correo: request.body.correo,
         contrasena: request.body.contrasena,
+<<<<<<< HEAD
         departamento : request.body.departamento,
          ciudad : request.body.ciudad,
          direccion : request.body.direccion,
          telefono : request.body.telefono,
+=======
+        direccion: request.body.direccion,
+        ciudad: request.body.ciudad,
+        departamento: request.body.departamento,
+        telefono: request.body.telefono,
+>>>>>>> 8ec86934cbc2c8388c0a2789474133d17bdf9003
     }
 
     if (post.nombre == undefined || post.nombre == null || post.nombre.trim() == "") {
@@ -41,6 +49,7 @@ usuariosController.Guardar = function(request, response) {
         response.json({ state: false, mensaje: "el campo apellido es un campo obligatorio" })
         return false;
     }
+
 
 
     usuariosModel.VerificarCedula(post, function(valida) {
@@ -80,12 +89,10 @@ usuariosController.CargarTodas = function(request, response) {
 usuariosController.ActualizarporCedula = function(request, response) {
 
     var post = {
-        cedula: request.body.cedula,
         nombre: request.body.nombre,
         apellido: request.body.apellido,
+        cedula: request.body.cedula,
         edad: request.body.edad,
-        correo: request.body.correo,
-        contrasena: request.body.contrasena,
         direccion: request.body.direccion,
         ciudad: request.body.ciudad,
         departamento: request.body.departamento,
@@ -116,6 +123,38 @@ usuariosController.ActualizarporCedula = function(request, response) {
             return false
         } else {
             usuariosModel.ActualizarporCedula(post, function(respuesta) {
+                response.json(respuesta)
+            })
+        }
+    })
+
+
+
+}
+usuariosController.ActualizarcontrasenaporCedula = function(request, response) {
+
+    var post = {
+        cedula: request.body.cedula,
+        contrasena: request.body.contrasena,
+
+    }
+
+    if (post.cedula == undefined || post.cedula == null || post.cedula.trim() == "") {
+        response.json({ state: false, mensaje: "el campo cedula es un campo obligatorio" })
+        return false;
+    }
+
+    if (post.contrasena == undefined || post.contrasena == null || post.contrasena.trim() == "") {
+        response.json({ state: false, mensaje: "el campo contrasena es un campo obligatorio" })
+        return false;
+    }
+
+    usuariosModel.VerificarCedula(post, function(valida) {
+        if (valida.state == true) {
+            response.json({ state: false, mensaje: "no se puede actualizar una cedula inexistente" })
+            return false
+        } else {
+            usuariosModel.ActualizarcontrasenaporCedula(post, function(respuesta) {
                 response.json(respuesta)
             })
         }
@@ -170,7 +209,7 @@ usuariosController.Ingresar = function(request, response) {
                 request.session.rol = respuesta.documentos[0].rol
                 request.session.correo = respuesta.documentos[0].correo
                 console.log(request.session)
-                response.json({ state: true, mensaje: "Bienvenido" })
+                response.json({ state: true, mensaje: "Bienvenido a Care" })
             }
         }
     })

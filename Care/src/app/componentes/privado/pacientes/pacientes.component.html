@@ -4,24 +4,26 @@
     <h5>Modulo Pacientes</h5>
 
     <table class="table table-hover">
-        <thead class="thead-dark" style="background: rgb(151, 170, 206);">
+        <thead class="encabezado" style="background: #b9b7b7">
             <tr>
+                <th scope="col">Fecha</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
-                <th scope="col">Dirección</th>
+                <th scope="col">Cedula</th>
                 <th scope="col">Contacto de emergencia</th>
-                <th scope="col">Historial Medico</th>
                 <th scope="col">Medicamento suministrado</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of [0,1,2,3]">
-                <td>Jorge</td>
-                <td>Leal</td>
-                <td>Calle 10 # 5-51</td>
-                <td>4445553</td>
-                <td>Mareos y fuerte dolor de cabeza</td>
-                <td>Acetaminofen</td>
+            <tr *ngFor="let item of datos">
+
+                <td (click)="CargarId(item._id)">{{item.fecha}}</td>
+                <td (click)="CargarId(item._id)">{{item.nombre}}</td>
+                <td (click)="CargarId(item._id)">{{item.apellido}}</td>
+                <td (click)="CargarId(item._id)">{{item.cedula}}</td>
+                <td (click)="CargarId(item._id)">{{item.contacto}}</td>
+                <td (click)="CargarId(item._id)">{{item.medicamento}}</td>
+
             </tr>
 
         </tbody>
@@ -45,26 +47,26 @@
                 <div class="modal-body">
 
                     <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        <input type="text" class="form-control form-control-sm" id="fecha" [(ngModel)]="fecha">
+                    </div>
+
+                    <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" class="form-control form-control-sm" id="nombre" [(ngModel)]="nombre">
                     </div>
-
                     <div class="form-group">
                         <label for="apellido">Apellido</label>
                         <input type="text" class="form-control form-control-sm" id="apellido" [(ngModel)]="apellido">
                     </div>
-
                     <div class="form-group">
-                        <label for="direccion">Direccion</label>
-                        <input type="text" class="form-control form-control-sm" id="direccion" [(ngModel)]="direccion">
+                        <label for="cedula">Cedula</label>
+                        <input [disabled]="Idseleccionado !=''" type="text" class="form-control form-control-sm" id="cedula" [(ngModel)]="cedula">
                     </div>
+
                     <div class="form-group">
                         <label for="contacto">Contacto de emergencia</label>
                         <input type="text" class="form-control form-control-sm" id="contacto" [(ngModel)]="contacto">
-                    </div>
-                    <div class="form-group">
-                        <label for="historial">Historial Medico</label>
-                        <input type="email" class="form-control form-control-sm" id="historial" [(ngModel)]="historial">
                     </div>
                     <div class="form-group">
                         <label for="medicamento">Medicamento suministrado</label>
@@ -74,9 +76,9 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Actualizar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <button type="button" class="btn btn-primary" *ngIf="Idseleccionado != ''" (click)="Actualizar()">Actualizar</button>
+                    <button type="button" class="btn btn-primary" *ngIf="Idseleccionado == ''" (click)="Guardar()">Guardar</button>
+                    <button type="button" class="btn btn-danger" *ngIf="Idseleccionado != ''" (click)="Eliminar()">Eliminar</button>
                 </div>
             </div>
         </div>

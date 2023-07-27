@@ -16,7 +16,7 @@ app.all('*', function(req, res, next) {
 const cors = require('cors')
 app.use(cors({
     origin: "http://localhost:4200",
-    methods: ["GET","POST","PUT","DELETE"]
+    methods: ["GET", "POST", "PUT", "DELETE"]
 }))
 
 var session = require('express-session')({
@@ -40,7 +40,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/" + config.bd, { useNewUrlParser: tr
         console.log("Conexion correcta al servidor mongo")
     }
 })
-
 
 
 app.use("/", express.static(__dirname + '/Pagina'))

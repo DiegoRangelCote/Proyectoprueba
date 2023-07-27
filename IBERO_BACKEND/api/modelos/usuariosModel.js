@@ -5,11 +5,15 @@ var datos = []
 const Schema = mongoose.Schema;
 var UsuariosSchema = new Schema({
     nombre: String,
-    cedula: Number,
     apellido: String,
+    cedula: Number,
     edad: Number,
     correo: String,
     contraseña: String,
+    direccion: String,
+    ciudad: String,
+    departamento: String,
+    telefono: String,
     rol: String
 })
 
@@ -19,7 +23,7 @@ const Mymodel = mongoose.model("usuarios", UsuariosSchema)
 usuariosModel.Guardar = function(post, callback) {
 
     const instancia = new Mymodel
-    
+
     instancia.cedula = post.cedula
     instancia.nombre = post.nombre
     instancia.apellido = post.apellido
@@ -27,10 +31,10 @@ usuariosModel.Guardar = function(post, callback) {
     instancia.correo = post.correo
     instancia.contrasena = post.contrasena
     instancia.rol = 1
-    instancia.direccion=post.direccion
-    instancia.ciudad=post.ciudad
-    instancia.departamento=post.departamento
-    instancia.telefono=post.telefono
+    instancia.direccion = post.direccion
+    instancia.ciudad = post.ciudad
+    instancia.departamento = post.departamento
+    instancia.telefono = post.telefono
 
 
     instancia.save((error, Creado) => {
@@ -129,6 +133,21 @@ usuariosModel.ActualizarporCedula = function(post, callback) {
     // datos[posicion].apellido = post.apellido
     // datos[posicion].edad = post.edad
     // return callback({ state: true, mensaje: "Usuario Actualizado" })
+}
+
+usuariosModel.ActualizarcontrasenaporCedula = function(post, callback) {
+
+    Mymodel.findOneAndUpdate({ cedula: post.cedula }, {
+        contrasena: post.contrasena,
+
+    }, (error, documentos) => {
+        if (error) {
+            console.log(error)
+            return callback({ state: false, error: error })
+        } else {
+            return callback({ state: true, mensaje: "Contraseña Actualizada" })
+        }
+    })
 }
 
 usuariosModel.EliminarporCedula = function(post, callback) {
