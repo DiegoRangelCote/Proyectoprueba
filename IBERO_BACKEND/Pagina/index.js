@@ -43,6 +43,10 @@ var CargarTodas = function() {
     <td>${respuesta.documentos[a].nombre}</td>
     <td>${respuesta.documentos[a].apellido}</td>
     <td>${respuesta.documentos[a].edad}</td>
+    <td>${respuesta.documentos[a].correo}</td>
+    <td>${respuesta.documentos[a].direccion}</td>
+    <td>${respuesta.documentos[a].ciudad}</td>
+    <td>${respuesta.documentos[a].departamento}</td>
     </tr>`
         }
     })
@@ -72,7 +76,7 @@ var Guardar = function() {
 
     var post = {
         url: "http://localhost:3000/Usuarios/Guardar",
-        data: `nombre=${nombre}&cedula=${cedula}&apellido=${apellido}&edad=${edad}`
+        data: `nombre=${nombre}&cedula=${cedula}&apellido=${apellido}&edad=${edad}&correo=${correo}&direccion=${direccion}&ciudad=${ciudad}&departamento=${departamento}&telefono=${telefono}`
     }
 
     Peticion(post.url, post.data, function(respuesta) {

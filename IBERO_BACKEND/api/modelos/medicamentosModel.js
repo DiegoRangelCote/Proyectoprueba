@@ -6,6 +6,8 @@ const Schema = mongoose.Schema;
 var medicamentosSchema = new Schema({
     codigo: String,
     medicamento: String,
+    cantidad: String,
+    precio: String,
 
 })
 
@@ -17,7 +19,10 @@ medicamentosModel.Guardar = function(post, callback) {
     const instancia = new Mymodel
 
     instancia.codigo = post.codigo
-    instancia.nombre = post.nombre
+    instancia.medicamento = post.medicamento
+    instancia.cantidad = post.cantidad
+    instancia.precio = post.precio
+
 
 
 

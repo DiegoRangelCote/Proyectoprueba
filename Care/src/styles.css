@@ -2,6 +2,7 @@ body {
     background: linear-gradient(135deg, #cfe5eadc, #cddaee9b);
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Yeseva One', cursive;
 }
 
 .entorno {

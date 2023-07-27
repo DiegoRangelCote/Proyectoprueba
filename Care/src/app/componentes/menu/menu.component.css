@@ -6,13 +6,22 @@
     border-top-right-radius: 0.25rem;
     color: white;
     font-size: 20px;
-    font-family: 'Lemon', cursive;
+    font-family: 'Yeseva One', cursive;
 }
 
 #encabezado {
-    background: #3f93a5dc
+    background: #276b7adc
 }
 
 #nav-tabContent {
     font-family: 'Lemon', cursive;
+}
+
+.btnbuscar {
+    color: white;
+    border-color: white;
+}
+
+.itemenu {
+    color: white;
 }

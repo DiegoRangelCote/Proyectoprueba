@@ -1,13 +1,15 @@
-.container{
+.container {
     margin-top: 30px;
+    font-family: 'Zilla Slab', serif;
 }
 
-.row{
+.row {
     margin-top: 10px;
 }
+
 .titulo1 {
     font-family: 'Abril Fatface';
-    color: #45d3d8;
+    color: #276b7adc;
 }
 
 .formulario {
@@ -19,6 +21,15 @@
     box-shadow: 0 0 30px rgba(237, 202, 202, 0.568);
     width: 340px;
 }
+
 .formulario:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+#btnenviar {
+    background: #3f93a5dc;
+    color: white;
+    margin-top: 15px;
+    width: 50%;
+    margin-left: 85px;
 }

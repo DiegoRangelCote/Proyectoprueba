@@ -6,6 +6,8 @@ medicamentosController.Guardar = function(request, response) {
     var post = {
         codigo: request.body.codigo,
         medicamento: request.body.medicamento,
+        cantidad: request.body.cantidad,
+        precio: request.body.precio
 
     }
     if (post.codigo == undefined || post.codigo == null || post.codigo.trim() == "") {
@@ -56,7 +58,9 @@ medicamentosController.ActualizarporId = function(request, response) {
 
     var post = {
         Id: request.body.Id,
-        medicamento: request.body.medicamento
+        medicamento: request.body.medicamento,
+        cantidad: request.body.cantidad,
+        precio: request.body.precio
     }
 
     if (post.Id == undefined || post.Id == null || post.Id.trim() == "") {

@@ -8,38 +8,38 @@
     </button>
     <!--metimos los botones dentro de un div para hacerlos que colapsen la informacion que preentan, agregamos los links de registro y login-->
     <div class="collapse navbar-collapse" id="botonescontenidos">
-       
+
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <button class="nav-link" id="nav-registro-tab" role="tab"><a routerLink="/registro">Registrar</a></button>
-            <button class="nav-link" id="nav-login-tab" role="tab"><a routerLink="/ingresar">Ingresar</a></button>
-            
-    <button class="nav-link" type="button" data-toggle="collapse" data-target="#btninforacompañamiento" aria-controls="#btninforacompañamiento" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="nav-link" id="nav-registro-tab" role="tab"><a routerLink="/registro" class="itemenu">Registrar</a></button>
+            <button class="nav-link" id="nav-login-tab" role="tab"><a routerLink="/ingresar" class="itemenu">Ingresar</a></button>
+
+            <button class="nav-link" type="button" data-toggle="collapse" data-target="#btninforacompañamiento" aria-controls="#btninforacompañamiento" aria-expanded="false" aria-label="Toggle navigation">
         Acompañamiento
     </button>
-    
-    <button class="nav-link" type="button" data-toggle="collapse" data-target="#btninforcitas" aria-controls="#btninforcitas" aria-expanded="false" aria-label="Toggle navigation">
+
+            <button class="nav-link" type="button" data-toggle="collapse" data-target="#btninforcitas" aria-controls="#btninforcitas" aria-expanded="false" aria-label="Toggle navigation">
         Citas
     </button>
-    
-    <button class="nav-link" type="button" data-toggle="collapse" data-target="#btninforExamenes" aria-controls="#btninforExamenes" aria-expanded="false" aria-label="Toggle navigation">
+
+            <button class="nav-link" type="button" data-toggle="collapse" data-target="#btninforExamenes" aria-controls="#btninforExamenes" aria-expanded="false" aria-label="Toggle navigation">
         Examenes
     </button>
 
-        </div> 
-    </div>   
+        </div>
+    </div>
     <div class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </div>
+        <button class="btn btn-outline-success my-2 my-sm-0 btnbuscar" type="submit">Buscar</button>
+    </div>
 </nav>
 
 <div class="tab-content " id="nav-tabContent">
     <app-acompa></app-acompa>
     <app-citas></app-citas>
     <app-examenes></app-examenes>
-     
-    
 
- </div>
 
- <router-outlet></router-outlet>
+
+</div>
+
+<router-outlet></router-outlet>

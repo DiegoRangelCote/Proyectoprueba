@@ -18,12 +18,16 @@ export class MedicamentosComponent {
 
 codigo:String = ""
 medicamento:String = ""
+cantidad:String = ""
+precio:String = ""
 Idseleccionado:String = ""
 datos:any[] = []
 
 nuevo(){
   this.codigo = ""
   this.medicamento = ""
+  this.cantidad = ""
+  this.precio = ""
   this.Idseleccionado = ""
   $('#exampleModal').modal('show')
 }
@@ -62,6 +66,8 @@ CargarId(id:string){
       if(res.state = true){
         this.codigo = res.documentos[0].codigo
         this.medicamento = res.documentos[0].medicamento
+        this.cantidad = res.documentos[0].cantidad
+        this.precio = res.documentos[0].precio
         this.Idseleccionado = res.documentos[0]._id
         $('#exampleModal').modal('show')
       }
@@ -79,6 +85,8 @@ Actualizar(){
     path:"/Medicamentos/ActualizarporId",
     payload:{
       medicamento:this.medicamento,
+      cantidad:this.cantidad,
+      precio:this.precio,
       Id:this.Idseleccionado
     }
   }
@@ -105,7 +113,9 @@ Guardar(){
     path:"/Medicamentos/Guardar",
     payload:{
       codigo:this.codigo.toString(),
-      medicamento:this.medicamento
+      medicamento:this.medicamento,
+      cantidad:this.cantidad.toString(),
+      precio:this.precio.toString(),
     }
   }
 

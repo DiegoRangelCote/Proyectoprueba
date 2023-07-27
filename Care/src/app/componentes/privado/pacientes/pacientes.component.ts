@@ -96,7 +96,6 @@ Actualizar(){
       fecha:this.fecha,
       nombre:this.nombre,
       apellido:this.apellido,
-      cedula:this.cedula.toString(),
       contacto:this.contacto,
       medicamento:this.medicamento,
       Id:this.Idseleccionado

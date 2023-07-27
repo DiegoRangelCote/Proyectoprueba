@@ -18,6 +18,8 @@
 
                 <td (click)="CargarId(item._id)">{{item.codigo}}</td>
                 <td (click)="CargarId(item._id)">{{item.medicamento}}</td>
+                <td (click)="CargarId(item._id)">{{item.cantidad}}</td>
+                <td (click)="CargarId(item._id)">{{item.precio}}</td>
 
             </tr>
 
@@ -43,12 +45,20 @@
 
                     <div class="form-group">
                         <label for="codigo">Codigo</label>
-                        <input type="text" class="form-control form-control-sm" id="codigo" [(ngModel)]="codigo">
+                        <input [disabled]="Idseleccionado !=''" type="text" class="form-control form-control-sm" id="codigo" [(ngModel)]="codigo">
                     </div>
 
                     <div class="form-group">
                         <label for="medicamento">Medicamento</label>
                         <input type="text" class="form-control form-control-sm" id="medicamento" [(ngModel)]="medicamento">
+                    </div>
+                    <div class="form-group">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="text" class="form-control form-control-sm" id="cantidad" [(ngModel)]="cantidad">
+                    </div>
+                    <div class="form-group">
+                        <label for="precio">Precio</label>
+                        <input type="text" class="form-control form-control-sm" id="precio" [(ngModel)]="precio">
                     </div>
                 </div>
                 <div class="modal-footer">

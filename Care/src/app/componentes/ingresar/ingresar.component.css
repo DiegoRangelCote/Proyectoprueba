@@ -1,17 +1,14 @@
-
 .container {
     margin-top: 70px;
     max-width: 380px;
     width: 100%;
     background: #fff;
-    border:solid 2px;
     padding: 26px 60px;
     border-radius: 25px;
     margin-bottom: 50px;
-    font-family: 'Lemon';
+    font-family: 'Yeseva One', cursive;
+    font-size: 20px;
 }
-
-
 
 .container .user-group {
     display: flex;
@@ -19,7 +16,6 @@
     justify-content: space-between;
     margin: 10px 0 10px 0;
 }
-
 
 .input-login {
     display: block;
@@ -38,7 +34,6 @@
     font-size: 16px;
 }
 
-
 .button {
     cursor: pointer;
     background: linear-gradient(135deg, #9ed8e5dc, #bad4ff62);
@@ -50,4 +45,17 @@
 
 .button:hover {
     background: linear-gradient(-135deg, #b6cfd2dc, #c9daf2cc);
+}
+
+#tittle {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    border-bottom: solid 1px rgb(127, 181, 212);
+    width: 100%;
+}
+
+#ingreso {
+    background: linear-gradient(135deg, #b1cbcece, #9daec7d2);
 }
