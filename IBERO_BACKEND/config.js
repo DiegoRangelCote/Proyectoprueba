@@ -5,4 +5,5 @@ config.ipbd = "127.0.0.1"
 config.clavesesion = "holamundo"
 
 
-module.exports.config = config
+
+module.exports.config=config
