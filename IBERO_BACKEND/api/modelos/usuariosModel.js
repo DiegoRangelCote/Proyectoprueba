@@ -24,13 +24,12 @@ usuariosModel.Guardar = function(post, callback) {
 
     const instancia = new Mymodel
 
-    instancia.cedula = post.cedula
     instancia.nombre = post.nombre
     instancia.apellido = post.apellido
+    instancia.cedula = post.cedula
     instancia.edad = post.edad
     instancia.correo = post.correo
     instancia.contrasena = post.contrasena
-    instancia.rol = 1
     instancia.direccion = post.direccion
     instancia.ciudad = post.ciudad
     instancia.departamento = post.departamento
@@ -117,7 +116,14 @@ usuariosModel.ActualizarporCedula = function(post, callback) {
     Mymodel.findOneAndUpdate({ cedula: post.cedula }, {
         nombre: post.nombre,
         apellido: post.apellido,
-        edad: post.edad
+        cedula: post.cedula,
+        edad: post.edad,
+        correo: post.correo,
+        direccion: post.direccion,
+        ciudad: post.ciudad,
+        departamento: post.departamento,
+        telefono: post.telefono,
+
     }, (error, documentos) => {
         if (error) {
             console.log(error)

@@ -17,5 +17,8 @@ export class MensajesService {
 
   Load(mensaje:string,tipo:string){
     this.data.push({mensaje:mensaje, tipo:tipo})
+    setTimeout(()=>{
+      this.data.splice(0,1)
+    }, 3000)
   }
 }

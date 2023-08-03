@@ -35,6 +35,10 @@ Registrar(){
       edad:this.edad,
       correo:this.correo,
       contrasena:this.contrasena,
+      direccion:this.direccion,
+      ciudad:this.ciudad,
+      departamento:this.departamento,
+      telefono:this.telefono,
       
 
     }

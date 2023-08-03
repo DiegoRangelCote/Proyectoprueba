@@ -1,11 +1,13 @@
 var usuariosController = require("./api/controladores/usuariosController.js").usuariosController
 var pacientesController = require("./api/controladores/pacientesController.js").pacientesController
-var medicamentosController = require("./api/controladores/medicamentosController.js").medicamentosController
-
+var serviciosController = require("./api/controladores/serviciosController.js").serviciosController
+var permisosController = require("./api/controladores/permisosController.js").permisosController
+var documentosController = require("./api/controladores/documentosController.js").documentosController
+var directorioController = require("./api/controladores/directorioController.js").directorioController
 var mdl = require('./midleware.js').midleware
 
 
-app.post("/Usuarios/Guardar", function(request, response) {
+app.post("/Usuarios/Guardar", mdl.Acceso, function(request, response) {
     usuariosController.Guardar(request, response)
 })
 
@@ -66,21 +68,113 @@ app.post("/Pacientes/EliminarporId", function(request, response) {
 
 
 
-app.post("/Medicamentos/Guardar", function(request, response) {
-    medicamentosController.Guardar(request, response)
+app.post("/Servicios/Guardar", function(request, response) {
+    serviciosController.Guardar(request, response)
 })
 
-app.post("/Medicamentos/CargarTodas", function(request, response) {
-    medicamentosController.CargarTodas(request, response)
+app.post("/Servicios/CargarTodas", function(request, response) {
+    serviciosController.CargarTodas(request, response)
 })
 
-app.post("/Medicamentos/CargarporId", function(request, response) {
-    medicamentosController.CargarporId(request, response)
+app.post("/Servicios/CargarporId", function(request, response) {
+    serviciosController.CargarporId(request, response)
 })
-app.post("/Medicamentos/ActualizarporId", function(request, response) {
-    medicamentosController.ActualizarporId(request, response)
+app.post("/Servicios/ActualizarporId", function(request, response) {
+    serviciosController.ActualizarporId(request, response)
 })
 
-app.post("/Medicamentos/EliminarporId", function(request, response) {
-    medicamentosController.EliminarporId(request, response)
+app.post("/Servicios/EliminarporId", function(request, response) {
+    serviciosController.EliminarporId(request, response)
+})
+
+
+
+app.post("/Permisos/Guardar", function(request, response) {
+    permisosController.Guardar(request, response)
+})
+
+app.post("/Permisos/CargarTodas", function(request, response) {
+    permisosController.CargarTodas(request, response)
+})
+
+app.post("/Permisos/CargarporId", function(request, response) {
+    permisosController.CargarporId(request, response)
+})
+app.post("/Permisos/ActualizarporId", function(request, response) {
+    permisosController.ActualizarporId(request, response)
+})
+
+app.post("/Permisos/EliminarporId", function(request, response) {
+    permisosController.EliminarporId(request, response)
+})
+
+app.post("/Permisos/Guardar", function(request, response) {
+    permisosController.Guardar(request, response)
+})
+
+
+
+app.post("/Directorio/Guardar", function(request, response) {
+    directorioController.Guardar(request, response)
+})
+
+app.post("/Directorio/CargarTodas", function(request, response) {
+    directorioController.CargarTodas(request, response)
+})
+
+app.post("/Directorio/CargarporId", function(request, response) {
+    directorioController.CargarporId(request, response)
+})
+app.post("/Directorio/ActualizarporId", function(request, response) {
+    directorioController.ActualizarporId(request, response)
+})
+
+app.post("/Directorio/EliminarporId", function(request, response) {
+    directorioController.EliminarporId(request, response)
+})
+
+
+
+
+
+
+
+
+
+app.post("/Documentos/Guardar", function(request, response) {
+    documentosController.Guardar(request, response)
+})
+
+app.post("/Documentos/CargarTodas", function(request, response) {
+    documentosController.CargarTodas(request, response)
+})
+
+app.post("/Documentos/CargarporId", function(request, response) {
+    documentosController.CargarporId(request, response)
+})
+app.post("/Documentos/ActualizarporId", function(request, response) {
+    documentosController.ActualizarporId(request, response)
+})
+
+app.post("/Documentos/EliminarporId", function(request, response) {
+    documentosController.EliminarporId(request, response)
+})
+
+
+
+
+
+
+var filesController = require("./api/controladores/filesController.js").filesController
+
+app.post('/files/:carpeta:id', function(request, response) {
+    filesController.SubirArchivos(resquest, response)
+})
+
+app.post('/filesPdf/:carpeta:id', function(request, response) {
+    filesController.SubirArchivosPdf(resquest, response)
+})
+
+app.post('/status', function(request, response) {
+    response.json(request.session)
 })

@@ -1,4 +1,18 @@
 .entorno {
-    font-family: 'Zilla Slab', serif;
-    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    margin-top: 60px;
+}
+
+#nuevo {
+    margin-left: 1170px;
+    background: #16959bec;
+}
+
+.btnopen {
+    background: #16959bec;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    letter-spacing: 1px;
 }
