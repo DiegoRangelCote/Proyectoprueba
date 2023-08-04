@@ -2,6 +2,9 @@ const express = require("express")
 global.app = express()
 global.config = require("./config.js").config
 const mongoose = require('mongoose')
+global.multer = require('multer')
+global.path = require('path')
+global.appRoot = path.resolve(__dirname)
 
 var bodyParser = require("body-parser")
 app.use(bodyParser.json())
@@ -41,7 +44,8 @@ mongoose.connect("mongodb://127.0.0.1:27017/" + config.bd, { useNewUrlParser: tr
     }
 })
 
-
+app.use("/imgServicios", express.static(__dirname + '/imgServicios'))
+app.use("/Archivos", express.static(__dirname + '/Archivos'))
 app.use("/", express.static(__dirname + '/Pagina'))
 
 

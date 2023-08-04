@@ -68,7 +68,15 @@ usuariosController.Guardar = function(request, response) {
 }
 usuariosController.CargarporCedula = function(request, response) {
     var post = {
-        cedula: request.body.cedula
+        nombre: request.body.nombre,
+        apellido: request.body.apellido,
+        cedula: request.body.cedula,
+        edad: request.body.edad,
+        correo: request.body.correo,
+        direccion: request.body.direccion,
+        ciudad: request.body.ciudad,
+        departamento: request.body.departamento,
+        telefono: request.body.telefono
 
     }
     if (post.cedula == undefined || post.cedula == null || post.cedula.trim() == "") {
@@ -96,7 +104,8 @@ usuariosController.ActualizarporCedula = function(request, response) {
         direccion: request.body.direccion,
         ciudad: request.body.ciudad,
         departamento: request.body.departamento,
-        telefono: request.body.telefono
+        telefono: request.body.telefono,
+        correo: request.body.correo
     }
 
     if (post.nombre == undefined || post.nombre == null || post.nombre.trim() == "") {
@@ -208,6 +217,7 @@ usuariosController.Ingresar = function(request, response) {
                 console.log(respuesta.documentos)
                 request.session.rol = respuesta.documentos[0].rol
                 request.session.correo = respuesta.documentos[0].correo
+                request.session.cedula = respuesta.documentos[0].cedula
                 console.log(request.session)
                 response.json({ state: true, mensaje: "Bienvenido a Care" })
             }

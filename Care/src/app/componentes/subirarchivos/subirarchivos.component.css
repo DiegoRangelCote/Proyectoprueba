@@ -1,0 +1,17 @@
+.selectfile {
+    background: #2196F3;
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+.contenedorupload {
+    width: 300px;
+    border: solid 1px;
+    margin: 3px;
+    border-radius: 11px;
+}
+
+button.btn.btn-success.btnsubir {
+    width: 100%;
+}

@@ -1,25 +1,20 @@
-body {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #cfe5eadc, #cddaee9b);
-}
 
 .container {
     max-width: 700px;
     width: 100%;
     background: #fff;
     padding: 26px 60px;
-    border-radius: 15px;
-    margin-bottom: 60px;
-    font-family: 'Yeseva One', cursive;
-    font-size: 18px;
-    margin-top: 30px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    font-family: 'Lemon';
 }
 
 .title {
+<<<<<<< HEAD
     font-size: 30px;
+=======
+    font-size: 24px;
+>>>>>>> 4dfc6a809e59170e69abc20893ac011a1c4901a8
     font-weight: 600;
     text-align: center;
     padding-bottom: 6px;
@@ -34,10 +29,12 @@ body {
     margin: 20px 0 12px 0;
 }
 
-.user-details .input-box {
+.input-box {
+    
     width: calc(100% / 2 -10px);
     margin: 20px 0 12px 0;
     margin-top: 5px;
+
 }
 
 .user-details .input-box .details {
@@ -56,8 +53,8 @@ body {
     font-size: 16px;
 }
 
-.btnregistrar {
-    height: 40px;
+.btn {
+    height: 100%;
     width: 100%;
     margin: 45px 0;
     outline: none;
@@ -70,6 +67,6 @@ body {
     letter-spacing: 1px;
 }
 
-.btnregistrar:hover {
+.btn:hover {
     background: linear-gradient(-135deg, #b6cfd2dc, #c9daf2cc);
 }

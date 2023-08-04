@@ -26,8 +26,13 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
 import { MenudashComponent } from './componentes/menudash/menudash.component'
 import { InterceptorService } from './interceptor/interceptor.service';
 import { PacientesComponent } from './componentes/privado/pacientes/pacientes.component';
-import { MedicamentosComponent } from './componentes/privado/medicamentos/medicamentos.component';
 import { UsuariosComponent } from './componentes/privado/usuarios/usuarios.component';
+import { ServiciosComponent } from './componentes/privado/servicios/servicios.component';
+import { CookieService } from 'ngx-cookie-service';
+import { PermisosComponent } from './componentes/privado/permisos/permisos.component';
+import { SubirarchivosComponent } from './componentes/subirarchivos/subirarchivos.component';
+import { DocumentosComponent } from './componentes/privado/documentos/documentos.component';
+import { DirectorioComponent } from './componentes/privado/directorio/directorio.component';
 
 
 
@@ -57,8 +62,12 @@ import { UsuariosComponent } from './componentes/privado/usuarios/usuarios.compo
     DashboardComponent,
     MenudashComponent,
     PacientesComponent,
-    MedicamentosComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    ServiciosComponent,
+    PermisosComponent,
+    SubirarchivosComponent,
+    DocumentosComponent,
+    DirectorioComponent
 
   ],
 
@@ -74,10 +83,9 @@ import { UsuariosComponent } from './componentes/privado/usuarios/usuarios.compo
       provide:HTTP_INTERCEPTORS,
       useClass:InterceptorService,
       multi:true
-    }
-  
+    },
+    CookieService
   ],
-
   bootstrap: [AppComponent]
 })
 

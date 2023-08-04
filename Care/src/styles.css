@@ -2,12 +2,12 @@ body {
     background: linear-gradient(135deg, #cfe5eadc, #cddaee9b);
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Gabriela', serif;
 }
 
 .entorno {
     position: absolute;
-    left: 180px;
+    left: 250px;
     top: 0px;
     background: whitesmoke;
     width: 100%;

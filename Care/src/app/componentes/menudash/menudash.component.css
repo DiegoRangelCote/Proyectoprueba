@@ -1,5 +1,5 @@
-#menulateral {
-    width: 180px;
+.menulateral {
+    width: 250px;
     background: #3f93a5dc;
     height: 100vh;
 }
@@ -9,4 +9,43 @@
     cursor: pointer;
     padding-top: 16px;
     margin-left: 11px;
+    font-size: medium;
+    width: 18rem;
+}
+
+.logo {
+    padding: .875rem 1.25rem;
+    background: #3f93a5dc;
+}
+
+.rounded-full {
+    border-radius: 100%;
+}
+
+#wrapper {
+    overflow-x: hidden;
+    background: whitesmoke;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin 0.25s ease-out;
+}
+
+#wrapper .toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+#menu-toggle {
+    cursor: pointer;
+}
+
+.list-group-item {
+    border: none;
+    padding: 20px 30px;
+}
+
+#navbarDropdown {
+    margin-left: 1100px;
 }
