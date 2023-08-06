@@ -13,6 +13,9 @@ import { ServiciosComponent } from './componentes/privado/servicios/servicios.co
 import { PermisosComponent } from './componentes/privado/permisos/permisos.component';
 import { DocumentosComponent } from './componentes/privado/documentos/documentos.component';
 import { DirectorioComponent } from './componentes/privado/directorio/directorio.component';
+import { ActualizarCorreoElectronicoComponent } from './componentes/privado/actualizar-correo-electronico/actualizar-correo-electronico.component';
+import { ActualizarClaveComponent } from './componentes/privado/actualizar-clave/actualizar-clave.component';
+import { ActualizarDatosComponent } from './componentes/privado/actualizar-datos/actualizar-datos.component';
 
 
 const routes: Routes = [
@@ -29,8 +32,14 @@ const routes: Routes = [
   {path:"usuarios",component:UsuariosComponent,pathMatch:"full"},
   {path:"documentos",component:DocumentosComponent,pathMatch:"full"},
   {path:"directorio",component:DirectorioComponent,pathMatch:"full"},
+  {path:"actualizarcorreoelectronico",component:ActualizarCorreoElectronicoComponent,pathMatch:"full"},
+  {path:"actualizarclave",component:ActualizarClaveComponent,pathMatch:"full"},
+  {path:"actualizardatos",component:ActualizarDatosComponent,pathMatch:"full"},
   {path:"**",component:HomeComponent,pathMatch:"full"},
   ];
+
+//los que vamos a trabajar son el path "ingreso y el de permisos"
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

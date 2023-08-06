@@ -1,0 +1,22 @@
+.menulateral {
+    width: 300px;
+    background: #3f93a5dc;
+    height: 100vh;
+}
+.logo {
+    padding: .875rem 1.25rem;
+    background: #3f93a5dc;
+}
+.itemmenu {
+    color: white;
+    cursor: pointer;
+    padding-top: 16px;
+    margin-left: 11px;
+    font-size: medium;
+    width: 18rem;
+}
+
+#wrapper {
+    overflow-x: hidden;
+    /*background: whitesmoke;*/
+}

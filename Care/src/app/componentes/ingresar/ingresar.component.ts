@@ -11,10 +11,20 @@ import { PeticionService } from 'src/app/servicios/peticion.service';
 export class IngresarComponent {
 
 
-  constructor(private peticion:PeticionService, private msg:MensajesService, private router:Router){}
+  constructor(private peticion:PeticionService, private msg:MensajesService, private router:Router,private rol:PeticionService){}
 
   correo:String =""
   contrasena:String =""
+  // public data:any[] = []
+
+  // /**
+  //  * funcion para extraer el rol
+  //  * @param rol ya sea 1,2,3
+  //  */
+
+  // Load(rol:string){
+  //   this.data.push({rol:rol})
+  // }
 
   Ingresar(){
 
@@ -24,16 +34,21 @@ export class IngresarComponent {
       payload:{
         correo:this.correo,
         contrasena:this.contrasena,
-  
+       
       }
     }
   
     this.peticion.Post(data.host + data.path,data.payload).then(
       (res:any)=>{
-        console.log(res)
+       console.log(res)
         if(res.state == true){
-          this.msg.Load(res.mensaje,"success")
+          console.log("vamos avanzando")
+          //if(res.rol ==true){
+          //  console.log("vamos avanzando")//montamos esta linea paraprobar
+          //}
+           this.msg.Load(res.mensaje,"success")
           this.router.navigate(['/dashboard'])
+        
         }
         else{
           this.msg.Load(res.mensaje,"danger")

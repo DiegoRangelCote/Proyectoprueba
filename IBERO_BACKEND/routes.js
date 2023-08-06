@@ -7,7 +7,7 @@ var directorioController = require("./api/controladores/directorioController.js"
 var mdl = require('./midleware.js').midleware
 
 
-app.post("/Usuarios/Guardar", mdl.Acceso, function(request, response) {
+app.post("/Usuarios/Guardar", function(request, response) {
     usuariosController.Guardar(request, response)
 })
 
@@ -167,12 +167,12 @@ app.post("/Documentos/EliminarporId", function(request, response) {
 
 var filesController = require("./api/controladores/filesController.js").filesController
 
-app.post('/files/:carpeta:id', function(request, response) {
-    filesController.SubirArchivos(resquest, response)
+app.post('/files/:carpeta/:id', function(request, response) {
+    filesController.SubirArchivos(request, response)
 })
 
-app.post('/filesPdf/:carpeta:id', function(request, response) {
-    filesController.SubirArchivosPdf(resquest, response)
+app.post('/filesPdf/:carpeta/:id', function(request, response) {
+    filesController.SubirArchivosPdf(request, response)
 })
 
 app.post('/status', function(request, response) {

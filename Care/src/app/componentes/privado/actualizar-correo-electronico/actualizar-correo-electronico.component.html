@@ -1,0 +1,87 @@
+<app-menu-pri-us></app-menu-pri-us>
+
+
+<div class="d-flex" id="wrapper" class="entorno">
+    <div id="page-content-wrapper">
+        <div class="container-fluid px-4">
+            <div class="row my-5">
+
+                <div class="col-sm-10 p-0 flex justify-content-lg-start justify-content-center">
+                    <h5 class="fs-4 mb-3 ml-lg-2">Modulo Usuarios</h5>
+
+                    <table class="table table-hover">
+                        <thead class="encabezado" style="background: #b9b7b7">
+                            <tr>
+                                <th scope="col">Cedula</th>
+                                <th scope="col">Correo Electrónico</th>
+                            </tr>
+                        </thead>
+                       <tbody>
+                            <tr *ngFor="let item of datos">
+
+                                
+                                <td (click)="CargarId(item.cedula)">{{item.cedula}}</td>
+                                <td (click)="CargarId(item.cedula)">{{item.correo}}</td>
+                                
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+<!--creamos este modal con un boton para que el usuario corrija no actualice sus datos-->
+                    
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                        Actualizar Correo Electronico
+                        </button>
+      
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Correo Electronico</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="modal-body">
+                                        
+                                            <div class="form-group">
+                                                <label for="cedula">Digita tu Cedula</label>
+                                                <input type="cedula" class="form-control" id="cedula" aria-describedby="cedula">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="mailA">Digita el correo electronico actual</label>
+                                                <input type="email" class="form-control" id="mailA" aria-describedby="mailA">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="mailN1">Digita el correo electronico nuevo</label>
+                                                <input type="email" class="form-control" id="mailA" aria-describedby="mailN1">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="mailN2">Confirma el correo electronico nuevo</label>
+                                                <input type="email" class="form-control" id="mailA" aria-describedby="mailN2">
+                                            </div> 
+                                             
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                    
+                                    <button type="button" class="btn btn-primary">Actualizar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>      
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+ 

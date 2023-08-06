@@ -28,11 +28,14 @@ import { InterceptorService } from './interceptor/interceptor.service';
 import { PacientesComponent } from './componentes/privado/pacientes/pacientes.component';
 import { UsuariosComponent } from './componentes/privado/usuarios/usuarios.component';
 import { ServiciosComponent } from './componentes/privado/servicios/servicios.component';
-import { CookieService } from 'ngx-cookie-service';
+//import { CookieService } from 'ngx-cookie-service';
 import { PermisosComponent } from './componentes/privado/permisos/permisos.component';
 import { SubirarchivosComponent } from './componentes/subirarchivos/subirarchivos.component';
 import { DocumentosComponent } from './componentes/privado/documentos/documentos.component';
 import { DirectorioComponent } from './componentes/privado/directorio/directorio.component';
+import { ActualizarDatosComponent } from './componentes/privado/actualizar-datos/actualizar-datos.component';
+import { ActualizarClaveComponent } from './componentes/privado/actualizar-clave/actualizar-clave.component';
+import { ActualizarCorreoElectronicoComponent } from './componentes/privado/actualizar-correo-electronico/actualizar-correo-electronico.component';
 
 
 
@@ -67,7 +70,10 @@ import { DirectorioComponent } from './componentes/privado/directorio/directorio
     PermisosComponent,
     SubirarchivosComponent,
     DocumentosComponent,
-    DirectorioComponent
+    DirectorioComponent,
+    ActualizarDatosComponent,
+    ActualizarClaveComponent,
+    ActualizarCorreoElectronicoComponent
 
   ],
 
@@ -84,7 +90,7 @@ import { DirectorioComponent } from './componentes/privado/directorio/directorio
       useClass:InterceptorService,
       multi:true
     },
-    CookieService
+    //CookieService
   ],
   bootstrap: [AppComponent]
 })

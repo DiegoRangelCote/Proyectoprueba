@@ -1,0 +1,103 @@
+<app-menu-pri-us></app-menu-pri-us>
+
+<div class="d-flex" id="wrapper" class="entorno">
+    <div id="page-content-wrapper">
+        <div class="container-fluid px-4">
+            <div class="row my-5">
+
+                <div class="col-sm-10 p-0 flex justify-content-lg-start justify-content-center">
+                    <h5 class="fs-4 mb-3 ml-lg-2">Modulo Usuario</h5>
+
+                    <table class="table table-hover">
+                        <thead class="encabezado" style="background: #b9b7b7">
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Cedula</th>
+                                <th scope="col">Edad</th>
+                                <th scope="col">Correo Electrónico</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">Ciudad</th>
+                                <th scope="col">Departamento</th>
+                                <th scope="col">Teléfono</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of datos">
+
+                                <td (click)="CargarId(item.cedula)">{{item.nombre}}</td>
+                                <td (click)="CargarId(item.cedula)">{{item.apellido}}</td>
+                                <td (click)="CargarId(item.cedula)">{{item.cedula}}</td>
+                                <td (click)="CargarId(item.cedula)">{{item.edad}}</td>
+                                <td (click)="CargarId(item.cedula)">{{item.correo}}</td>
+                                <td (click)="CargarId(item.cedula)">{{item.direccion}}</td>
+                                <td (click)="CargarId(item.cedula)">{{item.ciudad}}</td>
+                                <td (click)="CargarId(item.cedula)">{{item.departamento}}</td>
+                                <td (click)="CargarId(item.cedula)">{{item.telefono}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!--creamos este modal con un boton para que el usuario corrija no actualice sus datos-->
+                    
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                    Actualizar Datos Personales
+                    </button>
+  
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Datos Personales</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                
+                                    <div class="form-group">
+                                        <label for="cedula">Cedula</label>
+                                        <input type="text" class="form-control" id="cedula" aria-describedby="cedula">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nombre">Digita el nombre</label>
+                                        <input type="text" class="form-control" id="nombre" aria-describedby="nombre">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="apellido">Digita el apellido</label>
+                                        <input type="text" class="form-control" id="apellido" aria-describedby="apellido">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="direccion">Digita la direccion</label>
+                                        <input type="text" class="form-control" id="direccion" aria-describedby="direccion">
+                                    </div> 
+                                    <div class="form-group">
+                                        <label for="ciudad">Digita la ciudad</label>
+                                        <input type="text" class="form-control" id="ciudad" aria-describedby="ciudad">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="departamento">Digita el departamento</label>
+                                        <input type="text" class="form-control" id="departamento" aria-describedby="departamento">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telefono">Digita el telefono</label>
+                                        <input type="text" class="form-control" id="telefono" aria-describedby="telefono">
+                                    </div> 
+                                </div>
+                                <div class="modal-footer">
+                                
+                                <button type="button" class="btn btn-primary">Actualizar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+       

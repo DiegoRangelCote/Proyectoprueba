@@ -1,5 +1,5 @@
 .menulateral {
-    width: 250px;
+    width: 300px;
     background: #3f93a5dc;
     height: 100vh;
 }
@@ -22,10 +22,6 @@
     border-radius: 100%;
 }
 
-#wrapper {
-    overflow-x: hidden;
-    background: whitesmoke;
-}
 
 #sidebar-wrapper {
     min-height: 100vh;
@@ -49,3 +45,4 @@
 #navbarDropdown {
     margin-left: 1100px;
 }
+
