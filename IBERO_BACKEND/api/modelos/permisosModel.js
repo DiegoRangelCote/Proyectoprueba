@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 var permisosSchema = new Schema({
     ruta: String,
     estado: String,
-    rol_id: String,
+    rol_id: Number//esta String lo pasamos a Number
 
 })
 

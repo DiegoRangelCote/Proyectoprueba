@@ -8,8 +8,10 @@ import {Observable} from 'rxjs'
 export class InterceptorService {
 
   constructor() { }
+
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log('Interceptor')
+    //console.log('request','Observable')
+    
     const requestOptions ={
       headers: new HttpHeaders({
         //"Content-Type":"application/json;charset=UTF-8"
@@ -19,9 +21,9 @@ export class InterceptorService {
 
     const reqClone = request.clone(requestOptions)
 
+    console.log(reqClone)//ingresamos estos datos para validar
 
-
-
-    return next.handle(reqClone);
+    return next.handle(request);
+    //return next.handle(reqClone);
   }
 }

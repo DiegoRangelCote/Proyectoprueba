@@ -196,24 +196,49 @@ usuariosController.Ingresar = function(request, response) {
         response.json({ state: false, mensaje: "el campo correo es un campo obligatorio" })
         return false;
     }
+    if(post.correo.length < 4){
+        response.json({state:false,mensaje:"la informacion de correo no concuerda con un correo valido"})
+        return false;
+    }
     if (post.contrasena == undefined || post.contrasena == null || post.contrasena.trim() == "") {
         response.json({ state: false, mensaje: "el campo contraseña es un campo obligatorio" })
+        return false;
+    }
+    if(post.contrasena.length < 6){
+        response.json({state:false,mensaje:"el campo contraseña debe tener minimo seis caracteres"})
         return false;
     }
     usuariosModel.Ingresar(post, function(respuesta) {
         if (respuesta.state == false) {
             response.json({ state: false, mensaje: "error al iniciar sesion" })
         } else {
-            if (respuesta.documentos.length == 0) {
+            if (respuesta.documentos.length==0) {
                 response.json({ state: false, mensaje: "correo y contraseña no coinciden" })
             } else {
-                console.log(respuesta.documentos)
-                request.session.rol = respuesta.documentos[0].rol
-                request.session.correo = respuesta.documentos[0].correo
-                request.session.cedula = respuesta.documentos[0].cedula
-                console.log(request.session)
-                response.json({ state: true,respuesta,mensaje: "Bienvenido a Care"})
+                    if(respuesta.documentos[0].correo == request.body.correo){
+                        
+                    }
+                    else{ 
+                        
+                        response.json({state: false, mensaje: "correo y contraseña no coinciden" })
+                    }
+                    if(respuesta.documentos[0].contrasena == request.body.contrasena){
+                       
+                        request.session.rol = respuesta.documentos[0].rol_id
+                        request.session.correo = respuesta.documentos[0].correo
+                        request.session.contrasena = respuesta.documentos[0].contrasena
+                        request.session.cedula = respuesta.documentos[0].cedula
+                        console.log(request.session)
+                        response.json({ state: true,respuesta,mensaje: "Bienvenido a Care"})
+
+                    }else{
+                        
+                        response.json({ state: false, mensaje: "correo y contraseña no coinciden" })
+                    }
+                    
                 
+                //console.log(respuesta.documentos)
+                //response.json({ state: false, mensaje: "correo y contraseña no coinciden" })
             }
         }
     })

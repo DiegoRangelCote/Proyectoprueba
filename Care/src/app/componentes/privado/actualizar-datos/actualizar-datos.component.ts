@@ -52,7 +52,7 @@ export class ActualizarDatosComponent {
       (res:any)=>{
         
         this.datos = res.documentos
-      
+        console.log(this.datos)
       }
     )
 }

@@ -9,14 +9,14 @@ var UsuariosSchema = new Schema({
     cedula: Number,
     edad: Number,
     correo: String,
-    contraseña: String,
+    contrasena: String,
     direccion: String,
     ciudad: String,
     departamento: String,
     telefono: String,
-    rol: String
+    rol_id: Number //estaba como String lo pasamos a number
 })
-
+ 
 const Mymodel = mongoose.model("usuarios", UsuariosSchema)
 
 
@@ -34,7 +34,7 @@ usuariosModel.Guardar = function(post, callback) {
     instancia.ciudad = post.ciudad
     instancia.departamento = post.departamento
     instancia.telefono = post.telefono
-
+    instancia.rol_id= 1
 
     instancia.save((error, Creado) => {
         if (error) {

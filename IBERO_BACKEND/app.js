@@ -17,6 +17,8 @@ app.all('*', function(req, res, next) {
 
 
 const cors = require('cors')
+//ingrese esta linea que veo que hacia falta la dejo comentada hasta probarla
+//const { config } = require("./config.js")
 app.use(cors({
     origin: "http://localhost:4200",
     methods: ["GET", "POST", "PUT", "DELETE"]
