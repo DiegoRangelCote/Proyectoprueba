@@ -3,11 +3,15 @@ import { Router } from '@angular/router';
 import { MensajesService } from 'src/app/servicios/mensajes.service';
 import { PeticionService } from 'src/app/servicios/peticion.service';
 
+
+
+
 @Component({
   selector: 'app-ingresar',
   templateUrl: './ingresar.component.html',
   styleUrls: ['./ingresar.component.css']
 })
+
 export class IngresarComponent {
 
 
@@ -66,12 +70,14 @@ rol_id:number=0
           if(res.respuesta.documentos[0].rol_id==1){
             console.log("entro a una prueba de rol 1")
             this.msg.Load(res.mensaje,"success")
-            this.router.navigate(['/dashboard'])
+            this.router.navigate(['/menu-pri-ad'])
+            
           }else{
             if(res.respuesta.documentos[0].rol_id==2){
               console.log("entro a una prueba de rol 2")
+              this.router.navigate(['/dashboard'])
               this.msg.Load(res.mensaje,"success")
-              this.router.navigate(['/registro'])
+              
             }else{
               console.log("no entro ni a la 1 ni a la 2 "+res.respuesta.documentos[0].rol_id)
             }

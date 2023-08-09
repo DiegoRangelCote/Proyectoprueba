@@ -16,6 +16,7 @@ import { DirectorioComponent } from './componentes/privado/directorio/directorio
 import { ActualizarCorreoElectronicoComponent } from './componentes/privado/actualizar-correo-electronico/actualizar-correo-electronico.component';
 import { ActualizarClaveComponent } from './componentes/privado/actualizar-clave/actualizar-clave.component';
 import { ActualizarDatosComponent } from './componentes/privado/actualizar-datos/actualizar-datos.component';
+import { MenuPriAdComponent } from './componentes/menu-pri-ad/menu-pri-ad.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:"examenes",component:ExamenesComponent,pathMatch:"full"},
   {path:"citas",component:CitasComponent,pathMatch:"full"},
   {path:"dashboard",component:DashboardComponent,pathMatch:"full"},
+  {path:"menu-pri-ad",component:MenuPriAdComponent,pathMatch:"full"},
   {path:"pacientes",component:PacientesComponent,pathMatch:"full"},
   {path:"servicios",component:ServiciosComponent,pathMatch:"full"},
   {path:"permisos",component:PermisosComponent,pathMatch:"full"},
