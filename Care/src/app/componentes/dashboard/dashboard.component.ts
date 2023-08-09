@@ -9,12 +9,6 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent {
 
-  constructor(private peticion:PeticionService, private router:Router){}
-  
-  rol_id:Number=0
-  public data:any[] = []
-  Load(rol_id:Number){
-    this.data.push({rol_id})
-    console.log(rol_id)
-  }
+
+ 
 }

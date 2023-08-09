@@ -15,17 +15,17 @@ export class IngresarComponent {
 
   correo:String =""
   contrasena:String =""
-  
-  // public data:any[] = []
+rol_id:number=0
+//public data_rol:any[] = []
 
   // /**
   //  * funcion para extraer el rol
   //  * @param rol ya sea 1,2,3
   //  */
 
-  // Load(rol:string){
-  //   this.data.push({rol:rol})
-  // }
+ //Load(rol:string){
+    // this.data_rol.push({rol:rol})
+ // }
 
   Ingresar(){
 
@@ -49,11 +49,38 @@ export class IngresarComponent {
       (res:any)=>{
         
         console.log(res)
+        // console.log(res.respuesta.documentos[0].rol_id)
+        // if(res.respuesta.documentos[0].rol_id==1){
+        //   console.log("entro a una prueba de rol 1")
+        // }else{
+        //   if(res.respuesta.documentos[0].rol_id==2){
+        //     console.log("entro a una prueba de rol 2")
+        //   }else{
+        //     console.log("no entro ni a la 1 ni a la 2 "+res.respuesta.documentos[0].rol_id)
+        //   }
+          
+        // }
         if(res.state == true){
-                   
+                 
           console.log(res)
-          this.msg.Load(res.mensaje,"success")
-          this.router.navigate(['/dashboard'])
+          if(res.respuesta.documentos[0].rol_id==1){
+            console.log("entro a una prueba de rol 1")
+            this.msg.Load(res.mensaje,"success")
+            this.router.navigate(['/dashboard'])
+          }else{
+            if(res.respuesta.documentos[0].rol_id==2){
+              console.log("entro a una prueba de rol 2")
+              this.msg.Load(res.mensaje,"success")
+              this.router.navigate(['/registro'])
+            }else{
+              console.log("no entro ni a la 1 ni a la 2 "+res.respuesta.documentos[0].rol_id)
+            }
+            
+          }
+          
+          
+         // this.msg.Load(res.mensaje,"success")
+          //this.router.navigate(['/dashboard'])
           
         }
         else{

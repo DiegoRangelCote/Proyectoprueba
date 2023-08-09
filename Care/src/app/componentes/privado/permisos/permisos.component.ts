@@ -19,14 +19,14 @@ export class PermisosComponent {
 
 ruta:String = ""
 estado:String = ""
-rol_id:String = ""
+rol_id:Number = 0
 Idseleccionado:String = ""
 datos:any[] = []
 
 nuevo(){
   this.ruta = ""
   this.estado = ""
-  this.rol_id = ""
+  this.rol_id = 0
   this.Idseleccionado = ""
   $('#exampleModal').modal('show')
 }
