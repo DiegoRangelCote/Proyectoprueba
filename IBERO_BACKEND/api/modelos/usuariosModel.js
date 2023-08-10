@@ -34,7 +34,7 @@ usuariosModel.Guardar = function(post, callback) {
     instancia.ciudad = post.ciudad
     instancia.departamento = post.departamento
     instancia.telefono = post.telefono
-    instancia.rol_id= 1
+    instancia.rol_id= 1 //usuario final
 
     instancia.save((error, Creado) => {
         if (error) {

@@ -13,18 +13,18 @@
                                 <th scope="col">Cedula</th>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Apellido</th>
-
+                                <th scope="col">DEscrgar Documentos</th>
 
 
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let item of datos">
-
+<!-- cambiar el .id por cedula el href terminr de configurar la carpeta publica en app.js-->
                                 <td (click)="CargarId(item._id)">{{item.cedula}}</td>
                                 <td (click)="CargarId(item._id)">{{item.nombre}}</td>
                                 <td (click)="CargarId(item._id)">{{item.apellido}}</td>
-
+                                <td><a href="http://localhost:3000">Descarga pdf</a></td>
 
 
                             </tr>

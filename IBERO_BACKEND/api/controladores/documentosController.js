@@ -36,7 +36,7 @@ documentosController.Guardar = function(request, response) {
 
 
 }
-
+//cambiar por cedula
 documentosController.CargarporId = function(request, response) {
     var post = {
         Id: request.body.Id

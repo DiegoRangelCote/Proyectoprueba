@@ -56,16 +56,16 @@ CargarTodas(){
 
 }
 
-CargarId(cedula:string){
-  console.log(cedula)
+CargarId(id:string){
+  console.log(id)
 
-  this.item.path = "/files/archivos/" + cedula
+  this.item.path = "/filesPdf/archivos/" + id
 
   let data = {
     host:this.peticion.urlLocal,
     path:"/Documentos/CargarporId",
     payload:{
-      cedula:cedula.toString()
+      Id:id
     }
   }
 
@@ -73,7 +73,7 @@ CargarId(cedula:string){
     (res:any)=>{
       
       if(res.state = true){
-        
+        console.log(res.state)
         this.nombre = res.documentos[0].nombre
         this.apellido = res.documentos[0].apellido
         this.cedula = res.documentos[0].cedula

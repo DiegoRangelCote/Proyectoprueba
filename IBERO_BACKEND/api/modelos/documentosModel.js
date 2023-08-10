@@ -76,6 +76,7 @@ documentosModel.CargarTodas = function(post, callback) {
 
 documentosModel.CargarporId = function(post, callback) {
 
+    //cambiar por cedula
     Mymodel.find({ _id: post.Id }, { _v: 0 }, (error, documentos) => {
         if (error) {
             return callback({ state: false, documentos: [], mensaje: error })
